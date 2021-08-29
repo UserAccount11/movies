@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:movies/widgets/widgets.dart';
+
 class DetailsScreen extends StatelessWidget {
   
   @override
@@ -12,7 +14,13 @@ class DetailsScreen extends StatelessWidget {
           _CustomAppBar(),
           SliverList(
             delegate: SliverChildListDelegate([
-              _PosterAndImage()
+              _PosterAndTitle(),
+              _Overview(),
+              _Overview(),
+              _Overview(),
+              _Overview(),
+              _Overview(),
+              CastingCards()
             ])
           )
         ],
@@ -25,6 +33,7 @@ class _CustomAppBar extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
     return SliverAppBar(
       backgroundColor: Colors.indigo,
       expandedHeight: 200,
@@ -36,6 +45,7 @@ class _CustomAppBar extends StatelessWidget {
         title: Container(
           width: double.infinity,
           alignment: Alignment.bottomCenter,
+          padding: EdgeInsets.only(bottom: 5),
           color: Colors.black12,
           child: Text(
             'movie.title', 
@@ -52,7 +62,7 @@ class _CustomAppBar extends StatelessWidget {
   }
 }
 
-class _PosterAndImage extends StatelessWidget {
+class _PosterAndTitle extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
@@ -91,6 +101,21 @@ class _PosterAndImage extends StatelessWidget {
           )
         ],
       ),    
+    );
+  }
+}
+
+class _Overview extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      child: Text(
+        'Irure ut sunt laboris ea aliqua exercitation aute nisi ullamco consequat incididunt proident. Mollit sunt enim anim sit ullamco est amet. Ipsum dolor ex officia consectetur ad consequat culpa. Anim exercitation occaecat anim Lorem laboris irure ea. Mollit Lorem veniam tempor irure ullamco. Ut aliqua veniam esse incididunt eiusmod enim ad excepteur commodo eu elit occaecat non. Ex id aliqua sunt aliqua Lorem est magna ea.',
+        textAlign: TextAlign.justify,
+        style: Theme.of(context).textTheme.subtitle1,
+      ),
     );
   }
 }
