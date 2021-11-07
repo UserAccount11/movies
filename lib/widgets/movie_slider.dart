@@ -46,7 +46,7 @@ class _MovieSliderState extends State<MovieSlider> {
     if(widget.movies.length == 0) {
       return Container(
         width: double.infinity,
-        height: size.height * 0.3,
+        height: size.height * 0.35,
         child: Center(
           child: CircularProgressIndicator(),
         ),
@@ -55,7 +55,7 @@ class _MovieSliderState extends State<MovieSlider> {
 
     return Container(
       width: double.infinity,
-      height: size.height * 0.3,
+      height: size.height * 0.35,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -105,7 +105,7 @@ class _MoviePoster extends StatelessWidget {
                 placeholder: AssetImage('assets/no-image.jpg'), 
                 image: NetworkImage(movie.fullPosterPath),
                 width: size.width * 0.3,
-                height: size.height * 0.22,
+                height: size.height * 0.23,
                 fit: BoxFit.cover,
               ),
             ),
