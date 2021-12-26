@@ -87,8 +87,8 @@ class MoviesProvider extends ChangeNotifier {
 
   void getSuggestionsByQuery(String query) {
     debouncer.onValue = (value) async {
-      final searchResponse = await searchMovies(value);
-      _suggestionStreamController.add(searchResponse);
+      final results = await searchMovies(value);
+      _suggestionStreamController.add(results);
     };
     debouncer.value = query;
   }
