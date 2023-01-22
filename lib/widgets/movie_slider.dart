@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:movies/models/models.dart';
+import 'package:movies/screens/screens.dart';
 
 class MovieSlider extends StatefulWidget {
 
@@ -99,7 +100,7 @@ class _MoviePoster extends StatelessWidget {
       child: Column(
         children: [
           GestureDetector(
-            onTap: () => Navigator.pushNamed(context, 'details', arguments: movie),
+            onTap: () => Navigator.pushNamed(context, DetailsScreen.routeName, arguments: movie),
             child: Hero(
               tag: movie.heroId!,
               child: ClipRRect(

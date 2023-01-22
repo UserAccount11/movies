@@ -4,6 +4,8 @@ import 'package:movies/widgets/widgets.dart';
 import 'package:movies/models/models.dart';
 
 class DetailsScreen extends StatelessWidget {
+
+  static const String routeName = 'DetailsScreen';
   
   @override
   Widget build(BuildContext context) {

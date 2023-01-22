@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:movies/providers/movies_provider.dart';
-import 'package:movies/screens/screens.dart';
  
+import 'package:movies/router/app_routes.dart';
+import 'package:movies/theme/app_theme.dart';
+
 void main() => runApp(AppState());
 
 class AppState extends StatelessWidget {
@@ -26,16 +28,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Películas',
-      initialRoute: 'home',
-      routes: {
-        'home'    : (_) => HomeScreen(),
-        'details' : (_) => DetailsScreen()
-      },
-      theme: ThemeData.light().copyWith(
-        appBarTheme: AppBarTheme(
-          color: Colors.indigo
-        )
-      ),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+      theme: AppTheme.lightTheme
     );
   }
 }

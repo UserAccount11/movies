@@ -7,6 +7,8 @@ import 'package:movies/widgets/widgets.dart';
 
 
 class HomeScreen extends StatelessWidget {
+
+  static const String routeName = 'HomeScreen';
   
   @override
   Widget build(BuildContext context) {

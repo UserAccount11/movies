@@ -19,5 +19,6 @@ class Debouncer<T> {
     _value = val;
     _timer?.cancel();
     _timer = Timer(duration, () => onValue!(_value!));
-  }  
+  } 
+   
 }
