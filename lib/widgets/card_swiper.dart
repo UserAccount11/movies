@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:card_swiper/card_swiper.dart';
 
 import 'package:movies/models/models.dart';
+import 'package:movies/screens/screens.dart';
 
 class CardSwiper extends StatelessWidget {
 
@@ -39,7 +40,7 @@ class CardSwiper extends StatelessWidget {
           movie.heroId = 'swiper-${movie.id}';
 
           return GestureDetector(
-            onTap: () => Navigator.pushNamed(context, 'details', arguments: movie),
+            onTap: () => Navigator.pushNamed(context, DetailsScreen.routeName, arguments: movie),
             child: Hero(
               tag: movie.heroId!,
               child: ClipRRect(
