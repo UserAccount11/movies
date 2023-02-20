@@ -60,7 +60,6 @@ class Cast {
     });
 
     String get fullProfilePath {
-      
       if(this.profilePath != null)
         return 'https://image.tmdb.org/t/p/w500${this.profilePath}';
 
