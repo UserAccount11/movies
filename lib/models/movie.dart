@@ -37,15 +37,13 @@ class Movie {
     String? heroId;
 
     String get fullPosterPath {
-      
       if(this.posterPath != null)
         return 'https://image.tmdb.org/t/p/w500${this.posterPath}';
 
       return 'https://i.stack.imgur.com/GNhxO.png';
     } 
 
-    String get fullBackdropPath {
-      
+    String get fullBackdropPath {      
       if(this.backdropPath != null)
         return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
 
